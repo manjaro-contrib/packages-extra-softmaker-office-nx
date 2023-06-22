@@ -66,7 +66,7 @@ package() {
   
   # Symlink affiliate link
   install -d "${pkgdir}/usr/share/doc/officenx"
-  echo "freeoffice-nx-l-manjaro" > "${pkgdir}/usr/share/officenx/affiliate.txt"
+  echo "office-nx-l-manjaro" > "${pkgdir}/usr/share/officenx/affiliate.txt"
   ln -s "/usr/share/officenx/affiliate.txt" "$pkgdir/usr/share/doc/officenx/"
 }
 
