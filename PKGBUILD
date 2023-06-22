@@ -4,7 +4,7 @@
 
 pkgname=softmaker-office-nx
 pkgver=1200
-pkgrel=1
+pkgrel=2
 pkgdesc="GDPR-compliant alternative to Microsoft Office (subscription only version)"
 url="https://www.softmaker.com"
 arch=('x86_64')
@@ -63,5 +63,10 @@ package() {
   install -Dm644 "${srcdir}/textmaker-nx.desktop" "${pkgdir}/usr/share/applications/textmaker-nx.desktop"
 
   install -Dm644 "${pkgdir}/usr/share/officenx/mime/copyright" "${pkgdir}/usr/share/licenses/${pkgname}/copyright"
+  
+  # Symlink affiliate link
+  install -d "${pkgdir}/usr/share/doc/officenx"
+  echo "freeoffice-nx-l-manjaro" > "${pkgdir}/usr/share/officenx/affiliate.txt"
+  ln -s "/usr/share/officenx/affiliate.txt" "$pkgdir/usr/share/doc/officenx/"
 }
 
