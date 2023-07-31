@@ -4,14 +4,13 @@
 
 pkgname=softmaker-office-nx
 pkgver=1202
-pkgrel=1
+pkgrel=2
 pkgdesc="GDPR-compliant alternative to Microsoft Office (subscription only version)"
 url="https://www.softmaker.com"
 arch=('x86_64')
 license=('custom')
 depends=('hicolor-icon-theme' 'shared-mime-info' 'libxmu' 'libgl' 'libxrandr' 'libxrender'
          'libx11' 'libxext' 'libxmu' 'curl' 'desktop-file-utils')
-makedepends=('chrpath')
 source=("http://www.softmaker.net/down/${pkgname}-${pkgver}-amd64.tgz"
         'planmaker-nx.desktop'
         'presentations-nx.desktop'
@@ -32,11 +31,6 @@ sha256sums=('6d3387d1a9fd59fb00d16434803d02bf011022b0e44478568eccb3fb4edb7fc7'
 package() {
   install -dm755 "${pkgdir}/usr/share/officenx"
   bsdtar xf "${srcdir}/officenx.tar.lzma" -C "${pkgdir}/usr/share/officenx/"
-
-  # Remove insecure RPATH
-  chrpath --delete "${pkgdir}/usr/share/officenx/textmaker"
-  chrpath --delete "${pkgdir}/usr/share/officenx/planmaker"
-  chrpath --delete "${pkgdir}/usr/share/officenx/presentations"
 
   # fix ownership
   chown -R root:root "${pkgdir}"
