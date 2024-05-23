@@ -3,7 +3,7 @@
 # Contributor: WorMzy Tykashi <wormzy.tykashi@gmail.com>
 
 pkgname=softmaker-office-nx
-pkgver=1210
+pkgver=1214
 pkgrel=1
 pkgdesc="GDPR-compliant alternative to Microsoft Office (subscription only version)"
 url="https://www.softmaker.com"
@@ -21,7 +21,9 @@ depends=(
   'libxmu'
   'shared-mime-info'
 )
-source=("http://www.softmaker.net/down/${pkgname}-${pkgver}-amd64.tgz"
+source=(
+#        "https://www.softmaker.net/down/${pkgname}-${pkgver}-amd64.tgz"
+        "https://www.softmaker.net/temp/${pkgname}-${pkgver}-amd64.tgz"
         'planmaker-nx.desktop'
         'presentations-nx.desktop'
         'textmaker-nx.desktop'
@@ -29,7 +31,7 @@ source=("http://www.softmaker.net/down/${pkgname}-${pkgver}-amd64.tgz"
         'presentationsnx'
         'textmakernx'
         "${pkgname}.xml")
-sha256sums=('ecc9891aa98e641953a72d3ca55f6c5bfd4a2409997bbc403fe0683fd02c7b2a'
+sha256sums=('e3c854b089a29739c9943638cab127b6b312d90908d6df8fcf6349566e718aa1'
             'a4732fb134f5965a57ca6532f80ba824933d9889ccbdd10cb20c86e1cb7ae568'
             '5fa8f5571212dd063949e0b354614f22026b6fe275720ffac3adbb43dfa23c35'
             'c331776cb781f91cc6d4a6cf0bed4d7ad8202e915a3eed52fd6a0281a2ae6da3'
