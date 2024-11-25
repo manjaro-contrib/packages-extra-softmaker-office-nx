@@ -1,9 +1,10 @@
+# Maintainer: Mark Wagie <mark at manjaro dot org>
 # Maintainer: Philip Müller <philm@manjaro.org>
-# Maintainer: Bernhard Landauder <bernhard@manjaro.org>
+# Contributor: Bernhard Landauder <bernhard@manjaro.org>
 # Contributor: WorMzy Tykashi <wormzy.tykashi@gmail.com>
 
 pkgname=softmaker-office-nx
-pkgver=1218
+pkgver=1220
 pkgrel=1
 pkgdesc="GDPR-compliant alternative to Microsoft Office (subscription only version)"
 url="https://www.softmaker.com"
@@ -30,7 +31,7 @@ source=(
         'presentationsnx'
         'textmakernx'
         "${pkgname}.xml")
-sha256sums=('82c410bcefe15e5efd8c685139a51d1f65f2bbce2b82666da3e593996d918c43'
+sha256sums=('9339668ae7f571eff1a827a5b3de556e3fdeb82f32272ddcf119e724d755d421'
             'a4732fb134f5965a57ca6532f80ba824933d9889ccbdd10cb20c86e1cb7ae568'
             '5fa8f5571212dd063949e0b354614f22026b6fe275720ffac3adbb43dfa23c35'
             'c331776cb781f91cc6d4a6cf0bed4d7ad8202e915a3eed52fd6a0281a2ae6da3'
