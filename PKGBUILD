@@ -4,7 +4,7 @@
 # Contributor: WorMzy Tykashi <wormzy.tykashi@gmail.com>
 
 pkgname=softmaker-office-nx
-pkgver=1220
+pkgver=1222
 pkgrel=1
 pkgdesc="GDPR-compliant alternative to Microsoft Office (subscription only version)"
 url="https://www.softmaker.com"
@@ -31,7 +31,7 @@ source=(
         'presentationsnx'
         'textmakernx'
         "${pkgname}.xml")
-sha256sums=('9339668ae7f571eff1a827a5b3de556e3fdeb82f32272ddcf119e724d755d421'
+sha256sums=('f326bd458a5df46e5221360ea6f8718d013c89e57c4ee000a648cdc027fd9c7b'
             'a4732fb134f5965a57ca6532f80ba824933d9889ccbdd10cb20c86e1cb7ae568'
             '5fa8f5571212dd063949e0b354614f22026b6fe275720ffac3adbb43dfa23c35'
             'c331776cb781f91cc6d4a6cf0bed4d7ad8202e915a3eed52fd6a0281a2ae6da3'
