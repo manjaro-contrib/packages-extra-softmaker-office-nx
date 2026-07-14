@@ -4,7 +4,7 @@
 # Contributor: WorMzy Tykashi <wormzy.tykashi@gmail.com>
 
 pkgname=softmaker-office-nx
-pkgver=1234
+pkgver=1500
 pkgrel=1
 pkgdesc="GDPR-compliant alternative to Microsoft Office (subscription only version)"
 url="https://www.softmaker.com"
@@ -33,7 +33,7 @@ source=(
         'presentationsnx'
         'textmakernx'
         "${pkgname}.xml")
-sha256sums=('d346ec70ab7ee1a13de31eb0286a9787ab44d86883965e85e20599641125d891'
+sha256sums=('1c7bf9e3888dba350a679413135a98a04e7dc51b444d065f4bbdd0ce32b177fd'
             'a4732fb134f5965a57ca6532f80ba824933d9889ccbdd10cb20c86e1cb7ae568'
             '5fa8f5571212dd063949e0b354614f22026b6fe275720ffac3adbb43dfa23c35'
             'c331776cb781f91cc6d4a6cf0bed4d7ad8202e915a3eed52fd6a0281a2ae6da3'
@@ -77,10 +77,9 @@ package() {
   install -Dm644 "${srcdir}/textmaker-nx.desktop" "${pkgdir}/usr/share/applications/textmaker-nx.desktop"
 
   install -Dm644 "${pkgdir}/usr/share/officenx/mime/copyright" "${pkgdir}/usr/share/licenses/${pkgname}/copyright"
-  
+
   # Symlink affiliate link
   install -d "${pkgdir}/usr/share/doc/officenx"
   echo "office-nx-l-manjaro" > "${pkgdir}/usr/share/officenx/affiliate.txt"
   ln -s "/usr/share/officenx/affiliate.txt" "$pkgdir/usr/share/doc/officenx/"
 }
-
